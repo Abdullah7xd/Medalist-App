@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -19,17 +20,17 @@ const Navbar = () => {
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <NavLink class="nav-link" aria-current="page" to="/home">Home</NavLink>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <NavLink class="nav-link" to="#">Features</NavLink>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <NavLink class="nav-link" to="#">Pricing</NavLink>
         </li>
       </ul>
       <span class="navbar-text">
-        Navbar text with an inline element
+        
       </span>
     </div>
   </div>
