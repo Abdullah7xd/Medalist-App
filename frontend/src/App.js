@@ -10,6 +10,7 @@ import ManageCategories from './components/user/ManageCategories';
 import ManagePlayer from './components/user/ManagePlayer';
 import ManageTeams from './components/user/ManageTeams';
 import ManageTournament from './components/user/ManageTournament';
+import Signup from './components/main/Signup';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
     <Route path="main" element={<Main />}>
     <Route path='home' element={<Home/>}/> 
     <Route path='login' element={<Login/>}/>
+    <Route path='signup' element={<Signup/>}/>
     <Route path='managecategories' element={<ManageCategories/>}/>
     <Route path='Managematches' element={<ManageMatches/>}/>
     <Route path='manageplayer' element={<ManagePlayer/>}/>
