@@ -23,7 +23,7 @@ const Signup = () => {
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
         "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
       ),
-    cPassword: Yup
+    cpassword: Yup
       .string()
       .required()
       .oneOf([Yup.ref("password"), null], "Passwords must match")
@@ -62,7 +62,7 @@ const Signup = () => {
           text: 'User Registered Successfully'
         });
         //navigate to login page
-        navigate('/login');
+        navigate('/main/login');
       }else{
         Swal.fire({
           icon : "error",
@@ -98,7 +98,7 @@ const Signup = () => {
                         id="name"
                         value={signupform.values.name}
                         onChange={signupform.handleChange}
-                        className={"form-control" + (signupform.errors.name ? "bordeer-danger": '')}
+                        className={"form-control " + (signupform.errors.name ? "bordeer-danger": '')}
                         placeholder='Your Name'
                       />
                      
@@ -112,7 +112,7 @@ const Signup = () => {
                         id="email"
                         value={signupform.values.email}
                         onChange={signupform.handleChange}
-                        className={"form-control" + (signupform.errors.email ? "bordeer-danger": '')}
+                        className={"form-control " + (signupform.errors.email ? "bordeer-danger": '')}
                         placeholder='Your email'
                       />
                      
@@ -124,9 +124,9 @@ const Signup = () => {
                       <input
                         type="password"
                         id="password"
-                        value={signupform.values.email}
+                        value={signupform.values.password}
                         onChange={signupform.handleChange}
-                        className={"form-control" + (signupform.errors.password ? "border-danger": '')}
+                        className={"form-control " + (signupform.errors.password ? "border-danger": '')}
                         placeholder='Password'
                       />
                      
