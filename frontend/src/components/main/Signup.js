@@ -1,6 +1,79 @@
+import { useFormik } from 'formik'
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import * as Yup from 'yup';
 
 const Signup = () => {
+  const navigate = useNavigate();
+  const SignupSchema = Yup.object().shape({
+    name: Yup.string()
+      .min(2, 'Too Short!')
+      .max(10, 'Too Long!')
+      .required('Required'),
+    // lastName: Yup.string()
+    //   .min(2, 'Too Short!')
+    //   .max(50, 'Too Long!')
+    //   .required('Required'),
+    email: Yup.string().email('Invalid email').required('Required'),
+    password: Yup.string()
+      .required('Please Enter your password')
+      .matches(
+
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+        "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
+      ),
+    cPassword: Yup
+      .string()
+      .required()
+      .oneOf([Yup.ref("password"), null], "Passwords must match")
+
+
+  });
+  const signupform = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      password: '',
+      cPassword: '',
+    },
+    onSubmit: async (values) => {
+      console.log(values);
+      //making request to backend
+      //1.address url
+      //2. request method
+      //3. Data
+      //4. Data format to be sent
+
+      const res = await fetch('http://localhost:5000/user/add',{
+        method: 'Post',
+        body: JSON.stringify(values),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      console.log(res.status);
+      console.log(await res.text());
+      console.log('Form Submitted');
+      if(res.status === 200){
+        Swal.fire({
+          icon : "success",
+          title : 'Nice',
+          text: 'User Registered Successfully'
+        });
+        //navigate to login page
+        navigate('/login');
+      }else{
+        Swal.fire({
+          icon : "error",
+          title : 'Ooops..',
+          text: 'Something went wrong!'
+        });
+      }
+    },
+    validationSchema: SignupSchema
+  });
+
   return (
     <section className="vh-100" style={{ backgroundColor: "#eee" }}>
   <div className="container h-100">
@@ -13,18 +86,22 @@ const Signup = () => {
                 <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
                   Sign up
                 </p>
-                <form className="mx-1 mx-md-4">
+
+
+
+                <form className="mx-1 mx-md-4" onSubmit={signupform.handleSubmit} >
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-user fa-lg me-3 fa-fw" />
                     <div className=" flex-fill mb-0">
                       <input
                         type="text"
-                        id="form3Example1c"
-                        className="form-control"
+                        id="name"
+                        value={signupform.values.name}
+                        onChange={signupform.handleChange}
+                        className={"form-control" + (signupform.errors.name ? "bordeer-danger": '')}
+                        placeholder='Your Name'
                       />
-                      <label className="form-label" htmlFor="form3Example1c">
-                        Your Name
-                      </label>
+                     
                     </div>
                   </div>
                   <div className="d-flex flex-row align-items-center mb-4">
@@ -32,12 +109,13 @@ const Signup = () => {
                     <div className=" flex-fill mb-0">
                       <input
                         type="email"
-                        id="form3Example3c"
-                        className="form-control"
+                        id="email"
+                        value={signupform.values.email}
+                        onChange={signupform.handleChange}
+                        className={"form-control" + (signupform.errors.email ? "bordeer-danger": '')}
+                        placeholder='Your email'
                       />
-                      <label className="form-label" htmlFor="form3Example3c">
-                        Your Email
-                      </label>
+                     
                     </div>
                   </div>
                   <div className="d-flex flex-row align-items-center mb-4">
@@ -45,12 +123,13 @@ const Signup = () => {
                     <div className=" flex-fill mb-0">
                       <input
                         type="password"
-                        id="form3Example4c"
-                        className="form-control"
+                        id="password"
+                        value={signupform.values.email}
+                        onChange={signupform.handleChange}
+                        className={"form-control" + (signupform.errors.password ? "border-danger": '')}
+                        placeholder='Password'
                       />
-                      <label className="form-label" htmlFor="form3Example4c">
-                        Password
-                      </label>
+                     
                     </div>
                   </div>
                   <div className="d-flex flex-row align-items-center mb-4">
@@ -58,12 +137,14 @@ const Signup = () => {
                     <div className=" flex-fill mb-0">
                       <input
                         type="password"
-                        id="form3Example4cd"
-                        className="form-control"
+                        id="cpassword"
+                        value={signupform.values.cpassword}
+                        onChange={signupform.handleChange}
+                        className={"form-control" + (signupform.errors.cpassword ? "border-danger": '')}
+                        password='Password'
+                        
                       />
-                      <label className="form-label" htmlFor="form3Example4cd">
-                        Repeat your password
-                      </label>
+                      
                     </div>
                   </div>
                   <div className="form-check d-flex justify-content-center mb-5">
@@ -79,7 +160,7 @@ const Signup = () => {
                     </label>
                   </div>
                   <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="button" className="btn btn-primary btn-lg">
+                    <button type="submit" className="btn btn-primary btn-lg">
                       Register
                     </button>
                   </div>
