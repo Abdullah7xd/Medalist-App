@@ -1,12 +1,63 @@
+import { useFormik } from 'formik'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2';
+import * as Yup from 'yup';
 
 const Login = () => {
+  const navigate=useNavigate();
+  const loginSchema = Yup.object().shape({
+    name: Yup.string()
+      .min(2, 'Too Short!')
+      .max(10, 'Too Long!')
+      .required('Required'),
+      email: Yup.string().email('Invalid email').required('Required'),
+      password: Yup.string()
+        .required('Please Enter your password')
+        .matches(
+        ),
+        })
+  const signupform=useFormik({
+    initialValues:{
+      email:'',
+      password:'',
+    },
+    onSubmit:async(values)=>{
+      console.log(values);
+      const res= await fetch('http://localhost:5000/user/add',{
+        method:'Post',
+        body:JSON.stringify(values),
+        headers:{
+          'Content-Type':'application/json'
+        }
+      });
+      console.log(res.status);
+      console.log(await res.text());
+      console.log('Form Submitted');
+      if(res.status === 200){
+        Swal.fire({
+          icon : "success",
+          title : 'Nice',
+          text: 'User Registered Successfully'
+        });
+        navigate('/main/login');
+      }else{
+        Swal.fire({
+          icon : "error",
+          title : 'Ooops..',
+          text: 'Something went wrong!'
+        });
+    }
+  },
+  validationSchema:loginSchema
+});
+
   return (
-   
     <section className="vh-100 gradient-custom">
     <div className="container py-5 h-100">
       <div className="row d-flex justify-content-center align-items-center h-100">
         <div className="col-12 col-md-8 col-lg-6 col-xl-5">
+          
           <div
             className="card bg-dark text-white"
             style={{ borderRadius: "1rem" }}
@@ -23,7 +74,7 @@ const Login = () => {
                     id="typeEmailX"
                     className="form-control form-control-lg"
                   />
-                  <label className="form-label" htmlFor="typeEmailX">
+                  <label className="form-label text-white-50" htmlFor="typeEmailX">
                     Email
                   </label>
                 </div>
@@ -33,7 +84,7 @@ const Login = () => {
                     id="typePasswordX"
                     className="form-control form-control-lg"
                   />
-                  <label className="form-label" htmlFor="typePasswordX">
+                  <label className="form-label text-white-50" htmlFor="typePasswordX">
                     Password
                   </label>
                 </div>

@@ -16,19 +16,17 @@ const Signup = () => {
     //   .max(50, 'Too Long!')
     //   .required('Required'),
     email: Yup.string().email('Invalid email').required('Required'),
-    password: Yup.string()
-      .required('Please Enter your password')
-      .matches(
+    // password: Yup.string()
+    //   .required('Please Enter your password')
+    //   .matches(
 
-        /^(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[!@#\$%\^&\*])(?=.{8,})/,
-        "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
-      ),
-    cpassword: Yup
-      .string()
-      .required()
-      .oneOf([Yup.ref("password"), null], "Passwords must match")
-
-
+    //     /^(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[!@#\$%\^&\*])(?=.{8,})/,
+    //     "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
+    //   ),
+    // cpassword: Yup
+    //   .string()
+    //   .required()
+    //   .oneOf([Yup.ref("password"), null], "Passwords must match")
   });
   const signupform = useFormik({
     initialValues: {

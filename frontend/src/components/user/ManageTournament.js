@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-import React from 'react'
-
-const ManageTournament = () => {
-  return (
-    <div>ManageTournament</div>
-=======
 import React from 'react';
 
 const AddTournament = () => {
-
-  
-
   return <>
-
     <div
       className="modal fade"
       id="tournament-create"
@@ -70,7 +59,6 @@ const ManageTournament = () => {
         </div>
       </div>
     </div>
->>>>>>> dec18311da330a355f56dcd405d8f3b651a1b995
   )
 }
 
