@@ -9,7 +9,6 @@ import ManageScores from './ManageScores';
 import ManageTeams from './ManageTeams';
 const AddTournament = () => {
 
-  const { tour_id } = useParams();
   const url = app_config.apiUrl;
 
   const [currentUser, setCurrentUser] = useState(

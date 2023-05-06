@@ -9,11 +9,12 @@ import ManageMatches from './components/user/ManageMatches';
 import ManageCategories from './components/user/ManageCategories';
 import ManagePlayer from './components/user/ManagePlayer';
 import ManageTeams from './components/user/ManageTeams';
-import ManageTournament from './components/user/ManageTournament';
+
 import Signup from './components/main/Signup';
 import User from './components/user';
 import ManageScores from './components/user/ManageScores';
 import UserProfile from './components/user/UserProfile';
+import ManageTournament from './components/user/ManageTournament';
 
 
 function App() {
@@ -29,11 +30,14 @@ function App() {
             <Route path='signup' element={<Signup />} />
 
           </Route>
-          <Route path="user" element={<User />}>
+         
            
+          <Route path="user" element={<User />}>
             <Route path='managecategories' element={<ManageCategories />} />
+            <Route path='managetournament' element={<ManageTournament />} />
             <Route path='Managematches' element={<ManageMatches />} />
             <Route path='manageplayer' element={<ManagePlayer />} />
+            <Route path='profile' element={<UserProfile />} />
             <Route path='manageteam' element={<ManageTeams />} />
             <Route path='Managescores' element={<ManageScores/>} />
             <Route path='UserProfile' element={<UserProfile />} />
@@ -41,6 +45,7 @@ function App() {
 
 
           </Route>
+          
 
         </Routes>
       </BrowserRouter>
