@@ -1,5 +1,5 @@
+import { useFormik } from 'formik';
 import React from 'react';
-
 const AddTournament = () => {
 
   const tournamentForm = useFormik({
@@ -153,7 +153,7 @@ const ManageTournament = () => {
         </div>
       </div>
     </div>
->>>>>>> dec18311da330a355f56dcd405d8f3b651a1b995
+
   )
 }
 
