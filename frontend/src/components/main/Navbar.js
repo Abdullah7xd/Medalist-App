@@ -28,6 +28,9 @@ const Navbar = () => {
         <li class="nav-item mx-2">
           <NavLink class="nav-link" to="/main/Login">Login</NavLink>
         </li>
+        <li class="nav-item mx-2">
+          <NavLink class="nav-link"to="/user">User</NavLink>
+        </li>
       </ul>
       <span class="navbar-text">
         

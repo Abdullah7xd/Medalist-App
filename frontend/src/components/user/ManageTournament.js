@@ -12,7 +12,6 @@ const AddTournament = () => {
   })
 
   return <>
-
     <div
       className="modal fade"
       id="tournament-create"
@@ -153,7 +152,6 @@ const ManageTournament = () => {
         </div>
       </div>
     </div>
-
   )
 }
 
