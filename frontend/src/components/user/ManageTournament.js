@@ -217,7 +217,7 @@ const AddTournament = () => {
           <div className="modal-body">
           <div className="card rounded-3">
                       <img
-                        src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp"
+                        src="https://images.pexels.com/photos/3755440/pexels-photo-3755440.jpeg?auto=compress&cs=tinysrgb&w=600"
                         className="w-100"
                         style={{
                           borderTopLeftRadius: ".3rem",

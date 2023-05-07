@@ -10,7 +10,7 @@ const Navbar = () => {
     <>
   {/* Navbar*/}
   <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor: themeColor}}>
-    <div className="container justify-content-between">
+    <div className="container-fluid justify-content-between">
       {/* Left elements */}
       <div className="d-flex">
         {/* Brand */}
@@ -19,8 +19,8 @@ const Navbar = () => {
           href="#"
         >
           <img
-            src="/logo192.png"
-            height={40}
+            src="/trophy.png"
+            height={42}
             alt="MDB Logo"
             loading="lazy"
             style={{ marginTop: 2 }}
