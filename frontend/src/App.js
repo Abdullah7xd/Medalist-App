@@ -12,6 +12,7 @@ import ManageTeams from './components/user/ManageTeams';
 import ManageTournament from './components/user/ManageTournament';
 import Signup from './components/main/Signup';
 import User from './components/user';
+import UserProfile from './components/user/UserProfile';
 
 function App() {
   return (
@@ -26,15 +27,18 @@ function App() {
             <Route path='signup' element={<Signup />} />
 
           </Route>
-          <Route path="user" element={<User />}>
+         
            
+          <Route path="user" element={<User />}>
             <Route path='managecategories' element={<ManageCategories />} />
             <Route path='Managematches' element={<ManageMatches />} />
             <Route path='manageplayer' element={<ManagePlayer />} />
+            <Route path='profile' element={<UserProfile />} />
             <Route path='manageteam' element={<ManageTeams />} />
             <Route path='managetournament' element={<ManageTournament />} />
-
+            <Route path='profile' element={<UserProfile />} />
           </Route>
+          
 
         </Routes>
       </BrowserRouter>

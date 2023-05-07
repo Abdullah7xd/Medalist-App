@@ -1,8 +1,13 @@
 import { useFormik } from 'formik';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import app_config from '../../config';
+import ManagePlayer from './ManagePlayer';
+import ManageMatches from './ManageMatches';
+import ManageCategories from './ManageCategories';
+import ManageScores from './ManageScores';
+import ManageTeams from './ManageTeams';
 const AddTournament = () => {
 
-  const { tour_id } = useParams();
   const url = app_config.apiUrl;
 
   const [currentUser, setCurrentUser] = useState(
@@ -161,7 +166,7 @@ const AddTournament = () => {
               role="tabpanel"
               aria-labelledby="ex-with-icons-tab-5"
             >
-              <ManageTeam tournamentData={tournamentList[selTournament]} />
+              <ManageTeams  tournamentData={tournamentList[selTournament]} />
             </div>
           </div>
         </>
