@@ -8,7 +8,6 @@ const Navbar = () => {
 
   return (
     <>
-<<<<<<< HEAD
   {/* Navbar*/}
   <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor: themeColor}}>
     <div className="container-fluid justify-content-between">
@@ -39,38 +38,6 @@ const Navbar = () => {
           </NavLink>
         </li>
         {/* <li className="nav-item me-3 me-lg-1">
-=======
-      {/* Navbar*/}
-      <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: themeColor }}>
-        <div className="container justify-content-between">
-          {/* Left elements */}
-          <div className="d-flex">
-            {/* Brand */}
-            <a
-              className="navbar-brand me-2 mb-1 d-flex align-items-center"
-              href="#"
-            >
-              <img
-                src="/logo192.png"
-                height={40}
-                alt="MDB Logo"
-                loading="lazy"
-                style={{ marginTop: 2 }}
-              />
-            </a>
-          </div>
-          {/* Left elements */}
-          {/* Center elements */}
-          <ul className="navbar-nav flex-row d-none d-md-flex">
-            <li className="nav-item flex-row-reverse active">
-              <NavLink className="nav-link" to="/main/home" title='Home Page'>
-                <span>
-                  <i className="fas fa-home fa-lg" />
-                </span>
-              </NavLink>
-            </li>
-            {/* <li className="nav-item me-3 me-lg-1">
->>>>>>> 58e344d51de8cb3eeeb06c73afc355eb15cbb262
           <a className="nav-link" href="#">
             <span>
               <i className="fas fa-flag fa-lg" />

@@ -3,6 +3,11 @@ import React from 'react'
 // import './carousel.rtl.css';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css';
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+import './home.css';
+import { Navigation, Pagination } from "swiper";
 
 const Home = () => {
   return (
@@ -136,15 +141,38 @@ const Home = () => {
         </div> */}
 
         <Swiper
+        navigation={true}
+        pagination={true}
+        modules={[Navigation, Pagination]}
           spaceBetween={50}
-          slidesPerView={3}
+          // slidesPerView={3}
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
         >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
+          <SwiperSlide>
+            <div className='slideContent'>
+              <p className='display-4 fw-bold mt-auto'>Slide Title 1</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi non animi voluptates odio iure, odit mollitia aut a autem, sequi amet natus doloremque id omnis maiores velit. Animi suscipit totam minus iusto cupiditate beatae laboriosam hic nemo? Libero, aut dolorum!</p>
+              <button className='btn btn-primary btn-lg mt-4'>Action</button>
+            </div>
+            
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='slideContent'>
+              <p className='display-4 fw-bold mt-auto'>Slide Title 2</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi non animi voluptates odio iure, odit mollitia aut a autem, sequi amet natus doloremque id omnis maiores velit. Animi suscipit totam minus iusto cupiditate beatae laboriosam hic nemo? Libero, aut dolorum!</p>
+              <button className='btn btn-primary btn-lg mt-4'>Action</button>
+            </div>
+            
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='slideContent'>
+              <p className='display-4 fw-bold mt-auto'>Slide Title 3</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi non animi voluptates odio iure, odit mollitia aut a autem, sequi amet natus doloremque id omnis maiores velit. Animi suscipit totam minus iusto cupiditate beatae laboriosam hic nemo? Libero, aut dolorum!</p>
+              <button className='btn btn-primary btn-lg mt-4'>Action</button>
+            </div>
+            
+          </SwiperSlide>
           ...
         </Swiper>
 
