@@ -1,9 +1,10 @@
 import { useFormik } from 'formik';
 import React, { useEffect, useState } from 'react';
-import app_config from '../../config';
-import ManagePlayer from './ManagePlayer';
-import ManageMatches from './ManageMatches';
+import { useParams } from 'react-router-dom';
 import ManageCategories from './ManageCategories';
+import ManageMatches from './ManageMatches';
+import ManagePlayer from './ManagePlayer';
+import app_config from '../../config';
 import ManageScores from './ManageScores';
 import ManageTeams from './ManageTeams';
 const AddTournament = () => {
@@ -166,7 +167,7 @@ const AddTournament = () => {
               role="tabpanel"
               aria-labelledby="ex-with-icons-tab-5"
             >
-              <ManageTeams  tournamentData={tournamentList[selTournament]} />
+              <ManageTeams tournamentData={tournamentList[selTournament]} />
             </div>
           </div>
         </>

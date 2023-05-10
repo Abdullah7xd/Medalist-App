@@ -37,21 +37,21 @@ const Navbar = () => {
             </span>
           </NavLink>
         </li>
-        <li className="nav-item me-3 me-lg-1">
+        {/* <li className="nav-item me-3 me-lg-1">
           <a className="nav-link" href="#">
             <span>
               <i className="fas fa-flag fa-lg" />
             </span>
           </a>
-        </li>
-        <li className="nav-item me-3 me-lg-1">
+        </li> */}
+         {/* <li className="nav-item me-3 me-lg-1"> 
           <a className="nav-link" href="#">
             <span>
               <i className="fas fa-video fa-lg" />
             </span>
           </a>
-        </li>
-        <li className="nav-item me-3 me-lg-1">
+        </li>  */}
+        {/* <li className="nav-item me-3 me-lg-1">
           <a className="nav-link" href="#">
             <span>
               <i className="fas fa-shopping-bag fa-lg" />
@@ -67,13 +67,13 @@ const Navbar = () => {
               2
             </span>
           </a>
-        </li>
+        </li> */}
       </ul>
       {/* Center elements */}
       {/* Right elements */}
       <ul className="navbar-nav flex-row">
         <li className="nav-item me-3 me-lg-1">
-          <a className="nav-link d-sm-flex align-items-sm-center" href="#">
+          <NavLink className="nav-link d-sm-flex align-items-sm-center" to="/user/userprofile">
             <img
               src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
               className="rounded-circle"
@@ -82,7 +82,7 @@ const Navbar = () => {
               loading="lazy"
             />
             <strong className="d-none d-sm-block ms-1">John</strong>
-          </a>
+          </NavLink>
         </li>
         <li className="nav-item me-3 me-lg-1">
           <a className="nav-link" href="#">
