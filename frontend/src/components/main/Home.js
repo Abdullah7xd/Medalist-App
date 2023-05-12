@@ -14,136 +14,11 @@ const Home = () => {
     <>
       <main>
 
-        {/* <div id="myCarousel" className="carousel slide" data-bs-ride="carousel">
-          <div className="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#myCarousel"
-              data-bs-slide-to={0}
-              className="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            />
-            <button
-              type="button"
-              data-bs-target="#myCarousel"
-              data-bs-slide-to={1}
-              aria-label="Slide 2"
-            />
-            <button
-              type="button"
-              data-bs-target="#myCarousel"
-              data-bs-slide-to={2}
-              aria-label="Slide 3"
-            />
-          </div>
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <svg
-                className="bd-placeholder-img"
-                width="100%"
-                height="100%"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                preserveAspectRatio="xMidYMid slice"
-                focusable="false"
-              >
-                <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-              </svg>
-              <div className="container">
-                <div className="carousel-caption text-start">
-                  <h1>Example headline.</h1>
-                  <p>
-                    Some representative placeholder content for the first slide of
-                    the carousel.
-                  </p>
-                  <p>
-                    <a className="btn btn-lg btn-primary" href="#">
-                      Sign up today
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <svg
-                className="bd-placeholder-img"
-                width="100%"
-                height="100%"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                preserveAspectRatio="xMidYMid slice"
-                focusable="false"
-              >
-                <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-              </svg>
-              <div className="container">
-                <div className="carousel-caption">
-                  <h1>Another example headline.</h1>
-                  <p>
-                    Some representative placeholder content for the second slide of
-                    the carousel.
-                  </p>
-                  <p>
-                    <a className="btn btn-lg btn-primary" href="#">
-                      Learn more
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <svg
-                className="bd-placeholder-img"
-                width="100%"
-                height="100%"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                preserveAspectRatio="xMidYMid slice"
-                focusable="false"
-              >
-                <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-              </svg>
-              <div className="container">
-                <div className="carousel-caption text-end">
-                  <h1>One more for good measure.</h1>
-                  <p>
-                    Some representative placeholder content for the third slide of
-                    this carousel.
-                  </p>
-                  <p>
-                    <a className="btn btn-lg btn-primary" href="#">
-                      Browse gallery
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide="prev"
-          >
-            <span className="carousel-control-prev-icon" aria-hidden="true" />
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide="next"
-          >
-            <span className="carousel-control-next-icon" aria-hidden="true" />
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div> */}
 
         <Swiper
-        navigation={true}
-        pagination={true}
-        modules={[Navigation, Pagination]}
+          navigation={true}
+          pagination={true}
+          modules={[Navigation, Pagination]}
           spaceBetween={50}
           // slidesPerView={3}
           onSlideChange={() => console.log('slide change')}
@@ -153,27 +28,48 @@ const Home = () => {
             <div className='slideContent'>
               <p className='display-4 fw-bold mt-auto'>Slide Title 1</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi non animi voluptates odio iure, odit mollitia aut a autem, sequi amet natus doloremque id omnis maiores velit. Animi suscipit totam minus iusto cupiditate beatae laboriosam hic nemo? Libero, aut dolorum!</p>
-              <button className='btn btn-primary btn-lg mt-4'>Action</button>
+              {/* <button className='btn btn-primary btn-lg mt-4'>Action</button> */}
             </div>
-            
-          </SwiperSlide>
+            </SwiperSlide>
           <SwiperSlide>
             <div className='slideContent'>
-              <p className='display-4 fw-bold mt-auto'>Slide Title 2</p>
+              <p className='display-4 fw-bold mt-auto'></p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi non animi voluptates odio iure, odit mollitia aut a autem, sequi amet natus doloremque id omnis maiores velit. Animi suscipit totam minus iusto cupiditate beatae laboriosam hic nemo? Libero, aut dolorum!</p>
-              <button className='btn btn-primary btn-lg mt-4'>Action</button>
+              {/* <button className='btn btn-primary btn-lg mt-4'>Action</button> */}
             </div>
-            
           </SwiperSlide>
           <SwiperSlide>
-            <div className='slideContent'>
-              <p className='display-4 fw-bold mt-auto'>Slide Title 3</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi non animi voluptates odio iure, odit mollitia aut a autem, sequi amet natus doloremque id omnis maiores velit. Animi suscipit totam minus iusto cupiditate beatae laboriosam hic nemo? Libero, aut dolorum!</p>
-              <button className='btn btn-primary btn-lg mt-4'>Action</button>
+            <div className='slideContent w-100 border border-0' style={{backgroundImage:"url('https://media.istockphoto.com/id/1294703794/photo/woman-playing-chess.jpg?s=612x612&w=0&k=20&c=RojxlhxCmbllty1AQTGd4nAX7Odv63vMBrnVYJJ6dlQ=')",backgroundSize:"cover"}}>
+              <p className='display-4 fw-bold mt-auto'>Chess</p>
+              <p>Chess began in India in the 6th century with the name of ‘Chaturanga’. It has come through lots of changes and editions in the rules and system of the game. Modern chess has come in front by the European.</p>
+              {/* <button className='btn btn-primary btn-lg mt-4'>Action</button> */}
             </div>
-            
+
           </SwiperSlide>
-          ...
+          <SwiperSlide>
+            <div className='slideContent w-100 border border-0'style={{ backgroundImage: "url('https://www.sportsnet.ca/wp-content/uploads/2019/08/CanBall1.jpg')", backgroundSize: "cover",backgroundRepeat:"no-repeat"}}>
+              <p className='display-4 fw-bold mt-auto' style={{color:'red'}}>Basketball</p>
+              { <p className=''>"When we are saying this cannot be accomplished, this cannot be done, then we are short-changing ourselves. My brain, it cannot process failure. It will not process failure. Because if I have to sit there and face myself and tell myself, 'You are a failure,' I think that is almost worse than dying.-Kobe Bryant"</p>}
+              {/* <button className='btn btn-primary btn-lg mt-4'>Action</button> */}
+            </div>
+
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='slideContent w-100 border border-0' style={{backgroundImage:"url('https://wallpaperaccess.com/full/6802503.jpg')",backgroundSize:"cover",backgroundRepeat:"no-repeat" }}>
+              <p className='display-4 fw-bold mt-auto'>Badminton</p>
+              <p>Fitness is the key. You need to have strokes and stamina and agility; you need to exercise really well. On-court and off-court are equally important.-P.V.Sindhu</p>
+              {/* <button className='btn btn-primary btn-lg mt-4'>Action</button> */}
+            </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div className='slideContent'>
+              <p className='display-4 fw-bold mt-auto'></p>
+              <p></p>
+              {/* <button className='btn btn-primary btn-lg mt-4'>Action</button> */}
+            </div>
+          </SwiperSlide>
+          {/* ... */}
+
         </Swiper>
 
         {/* Marketing messaging and featurettes

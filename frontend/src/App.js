@@ -28,10 +28,7 @@ function App() {
             <Route path='home' element={<Home />} />
             <Route path='login' element={<Login />} />
             <Route path='signup' element={<Signup />} />
-
           </Route>
-         
-           
           <Route path="user" element={<User />}>
             <Route path='managecategories' element={<ManageCategories />} />
             <Route path='managetournament' element={<ManageTournament />} />
@@ -42,12 +39,9 @@ function App() {
             <Route path='managetournament' element={<ManageTournament />} />
             <Route path='profile' element={<UserProfile />} />
           </Route>
-          
-
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
-
 export default App;

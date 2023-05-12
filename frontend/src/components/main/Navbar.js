@@ -102,9 +102,9 @@ const Navbar = () => {
                 aria-expanded="false"
               >
                 <i className="fas fa-chevron-circle-down fa-lg" />
-                <span className="badge rounded-pill badge-notification bg-danger">
+                {/* <span className="badge rounded-pill badge-notification bg-danger">
                   6
-                </span>
+                </span> */}
               </a>
               <ul
                 className="dropdown-menu dropdown-menu-end"
