@@ -10,7 +10,7 @@ const Navbar = () => {
     <>
   {/* Navbar*/}
   <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor: themeColor}}>
-    <div className="container-fluid justify-content-between">
+    <div className="container justify-content-between">
       {/* Left elements */}
       <div className="d-flex">
         {/* Brand */}
@@ -37,6 +37,7 @@ const Navbar = () => {
             </span>
           </NavLink>
         </li>
+        </ul>
         {/* <li className="nav-item me-3 me-lg-1">
           <a className="nav-link" href="#">
             <span>
@@ -68,7 +69,6 @@ const Navbar = () => {
             </span>
           </a>
         </li> */}
-          </ul>
           {/* Center elements */}
           {/* Right elements */}
           <ul className="navbar-nav flex-row">
