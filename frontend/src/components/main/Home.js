@@ -150,30 +150,31 @@ const Home = () => {
           onSwiper={(swiper) => console.log(swiper)}
         >
           <SwiperSlide>
-            <div className='slideContent'>
-              <p className='display-4 fw-bold mt-auto'>Slide Title 1</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi non animi voluptates odio iure, odit mollitia aut a autem, sequi amet natus doloremque id omnis maiores velit. Animi suscipit totam minus iusto cupiditate beatae laboriosam hic nemo? Libero, aut dolorum!</p>
+            <div className='slideContent w-100 border border-0' style={{backgroundImage:"url('https://images.pexels.com/photos/3800541/pexels-photo-3800541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",backgroundSize:"cover",backgroundRepeat:"no-repeat"}}>
+              
+              <p className='display-4 fw-bold mt-auto'>CRICKET</p>
+              <p className=' fw-bold mt-auto' style={{color:'rgb(255,215,0)'}}>A cricket tournament typically involves multiple teams competing against each other in a series of matches. The tournament can be organized in different formats, such as a round-robin, knockout, or a combination of both</p>
               <button className='btn btn-primary btn-lg mt-4'>Action</button>
             </div>
             
           </SwiperSlide>
           <SwiperSlide>
-            <div className='slideContent'>
-              <p className='display-4 fw-bold mt-auto'>Slide Title 2</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi non animi voluptates odio iure, odit mollitia aut a autem, sequi amet natus doloremque id omnis maiores velit. Animi suscipit totam minus iusto cupiditate beatae laboriosam hic nemo? Libero, aut dolorum!</p>
+            <div className='slideContent w-100 border border-0' style={{backgroundImage:"url('https://wallpapers.com/images/hd/intense-game-volleyball-4k-0c5y2vg6bn9zsh17.jpg')", backgroundsize:"cover", backgroundRepeat:"no-repeat",}}>
+              <p className='display-4 fw-bold mt-auto'>VolleyBall</p>
+              <p>A game played between two teams with six players on each side, who try to score points by hitting a ball over a net and onto the opponent's court.</p>
               <button className='btn btn-primary btn-lg mt-4'>Action</button>
             </div>
             
           </SwiperSlide>
           <SwiperSlide>
-            <div className='slideContent'>
+            <div className='slideContent w-100 border border-0'>
               <p className='display-4 fw-bold mt-auto'>Slide Title 3</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi non animi voluptates odio iure, odit mollitia aut a autem, sequi amet natus doloremque id omnis maiores velit. Animi suscipit totam minus iusto cupiditate beatae laboriosam hic nemo? Libero, aut dolorum!</p>
               <button className='btn btn-primary btn-lg mt-4'>Action</button>
             </div>
             
           </SwiperSlide>
-          ...
+          
         </Swiper>
 
         {/* Marketing messaging and featurettes

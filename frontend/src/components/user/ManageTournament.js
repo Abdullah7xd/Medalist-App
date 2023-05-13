@@ -206,7 +206,7 @@ const AddTournament = () => {
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title" id="exampleModalLabel">
-              REGISTRATION
+              TOURNAMENT REGISTRATION
             </h5>
             <button
               type="button"
@@ -232,18 +232,29 @@ const AddTournament = () => {
                 </h3>
                 <form className="px-md-2" onSubmit={tournamentForm.handleSubmit} >
                   <div className=" mb-4">
+                  <label className='text-muted' >Tournament Name</label>
                     <input
                       type="text"
                       id="title"
                       value={tournamentForm.values.title}
                       onChange={tournamentForm.handleChange}
-                      className={"form-control" + (tournamentForm.errors.title ? "border-danger" : '')}
+                      className={"mb-4 form-control" + (tournamentForm.errors.title ? " border-danger" : '')}
+                      placeholder='Title'
+                    />
+                  <label className='text-muted'>Description</label>
+                    <input
+                      type="text"
+                      id="title"
+                      value={tournamentForm.values.title}
+                      onChange={tournamentForm.handleChange}
+                      className={"mb-4 form-control" + (tournamentForm.errors.title ? " border-danger" : '')}
                       placeholder='Title'
                     />
 
                     <div className="my-4">
                       <label>Select Game</label>
-                      <select>
+                      <select className='form-control'>
+                        <option value="cricket">Badminton</option>
                         <option value="cricket">Cricket</option>
                         <option value="basketball">Basketball</option>
                         <option value="chess">Chess</option>
@@ -271,7 +282,7 @@ const AddTournament = () => {
                           />
                         </div>
                       </div>
-                      <div className="col-md-6 mb-4">
+                      {/* <div className="col-md-6 mb-4">
                         <select className="select">
                           <option value={1} disabled="">
                             Gender
@@ -280,9 +291,9 @@ const AddTournament = () => {
                           <option value={3}>Male</option>
                           <option value={4}>Other</option>
                         </select>
-                      </div>
+                      </div> */}
                     </div>
-                    <div className="mb-4">
+                    {/* <div className="mb-4">
                       <select className="select">
                         <option value={1} disabled="">
                           Class
@@ -291,22 +302,22 @@ const AddTournament = () => {
                         <option value={3}>Class 2</option>
                         <option value={4}>Class 3</option>
                       </select>
-                    </div>
-                    <div className="row mb-4 pb-2 pb-md-0 mb-md-5">
+                    </div> */}
+                    <div className="row">
                       <div className="col-md-6">
                         <div className="">
-                          <input
+                          {/* <input
                             type="text"
                             id="form3Example1w"
                             className="form-control"
-                          />
-                          <label className="form-label" htmlFor="form3Example1w">
+                          /> */}
+                          {/* <label className="form-label" htmlFor="form3Example1w">
                             Registration code
-                          </label>
+                          </label> */}
                         </div>
                       </div>
                     </div>
-                    <div className="">
+                    <div className="mb-5">
                       <label className="form-label" htmlFor="textAreaExample">
                         Description
                       </label>
