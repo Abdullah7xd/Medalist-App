@@ -28,8 +28,10 @@ const Login = () => {
 				  title : 'Nice',
 				  text: 'Logged In Successfully'
 				})
-        
 
+        const data = await res.json();
+
+        sessionStorage.setItem('user', JSON.stringify(data));
         navigate('/user/managetournament');
 
 			}else if(res.status===401){
