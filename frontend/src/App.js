@@ -37,7 +37,8 @@ function App() {
             <Route path='profile' element={<UserProfile />} />
             <Route path='manageteam' element={<ManageTeams />} />
             <Route path='managetournament' element={<ManageTournament />} />
-            <Route path='profile' element={<UserProfile />} />
+            <Route path='userprofile' element={<UserProfile />} />
+            <Route path='managescores' element={<ManageScores/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

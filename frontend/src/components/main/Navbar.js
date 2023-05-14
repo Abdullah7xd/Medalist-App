@@ -75,17 +75,17 @@ const Navbar = () => {
             <li className="nav-item me-3 me-lg-1">
               <NavLink className="nav-link d-sm-flex align-items-sm-center" to="/user/userprofile">
                 <img
-                  src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
+                  src="https://img.freepik.com/premium-vector/user-icon-human-person-symbol-social-profile-icon-avatar-login-sign-web-user-symbol-neumorphic-ui-ux-white-user-interface-web-button-neumorphism-vector-eps-10_399089-2757.jpg?w=2000"
                   className="rounded-circle"
                   height={22}
-                  alt="Black and White Portrait of a Man"
+                  alt="User icon"
                   loading="lazy"
                 />
-                <strong className="d-none d-sm-block ms-1">John</strong>
+                <strong className="d-none d-sm-block ms-1">user</strong>
               </NavLink>
             </li>
             <li className="nav-item me-3 me-lg-1">
-              <a className="nav-link" href="#">
+              <a className="nav-link" to="/">
                 <span>
                   <i className="fas fa-plus-circle fa-lg" />
                 </span>
@@ -185,9 +185,9 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Another news
-                  </a>
+                  <NavLink className="dropdown-item" to="/user/ManageScores">
+                    ManageScores
+                  </NavLink>
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">

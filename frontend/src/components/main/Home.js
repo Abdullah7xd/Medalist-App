@@ -13,8 +13,6 @@ const Home = () => {
   return (
     <>
       <main>
-
-
         <Swiper
           navigation={true}
           pagination={true}
@@ -25,22 +23,22 @@ const Home = () => {
           onSwiper={(swiper) => console.log(swiper)}
         >
           <SwiperSlide>
-            <div className='slideContent'>
-              <p className='display-4 fw-bold mt-auto'>Slide Title 1</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi non animi voluptates odio iure, odit mollitia aut a autem, sequi amet natus doloremque id omnis maiores velit. Animi suscipit totam minus iusto cupiditate beatae laboriosam hic nemo? Libero, aut dolorum!</p>
+            <div className='slideContent w-100 border border-0' style={{backgroundImage:"url('https://wallpaper.dog/large/20465764.jpg')",backgroundSize:"cover"}}>
+              <p className='display-4 fw-bold mt-auto'>Cricket</p>
+              <p>“Enjoy the game & Chase your dreams. Dreams do come true.” – Sachin Tendulkar</p>
               {/* <button className='btn btn-primary btn-lg mt-4'>Action</button> */}
             </div>
             </SwiperSlide>
           <SwiperSlide>
-            <div className='slideContent'>
-              <p className='display-4 fw-bold mt-auto'></p>
+            <div className='slideContent w-100 border border-0 ' style={{backgroundImage:"url('https://wallpapers.com/images/hd/intense-game-volleyball-4k-0c5y2vg6bn9zsh17.jpg')",backgroundSize:"cover"}}>
+              <p className='display-4 fw-bold mt-auto'>Volleyball</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi non animi voluptates odio iure, odit mollitia aut a autem, sequi amet natus doloremque id omnis maiores velit. Animi suscipit totam minus iusto cupiditate beatae laboriosam hic nemo? Libero, aut dolorum!</p>
               {/* <button className='btn btn-primary btn-lg mt-4'>Action</button> */}
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className='slideContent w-100 border border-0' style={{backgroundImage:"url('https://media.istockphoto.com/id/1294703794/photo/woman-playing-chess.jpg?s=612x612&w=0&k=20&c=RojxlhxCmbllty1AQTGd4nAX7Odv63vMBrnVYJJ6dlQ=')",backgroundSize:"cover"}}>
-              <p className='display-4 fw-bold mt-auto'>Chess</p>
+              <p className='display-4 fw-bold mt-auto' style={{color:''}}>Chess</p>
               <p>Chess began in India in the 6th century with the name of ‘Chaturanga’. It has come through lots of changes and editions in the rules and system of the game. Modern chess has come in front by the European.</p>
               {/* <button className='btn btn-primary btn-lg mt-4'>Action</button> */}
             </div>
@@ -61,13 +59,6 @@ const Home = () => {
               {/* <button className='btn btn-primary btn-lg mt-4'>Action</button> */}
             </div>
             </SwiperSlide>
-            <SwiperSlide>
-            <div className='slideContent'>
-              <p className='display-4 fw-bold mt-auto'></p>
-              <p></p>
-              {/* <button className='btn btn-primary btn-lg mt-4'>Action</button> */}
-            </div>
-          </SwiperSlide>
           {/* ... */}
 
         </Swiper>
