@@ -30,13 +30,7 @@ const Navbar = () => {
       {/* Left elements */}
       {/* Center elements */}
       <ul className="navbar-nav flex-row d-none d-md-flex">
-        <li className="nav-item me-3 me-lg-1 active">
-          <NavLink className="nav-link" to="/main/home" title='Home Page'>
-            <span>
-              <i className="fas fa-home fa-lg" />
-            </span>
-          </NavLink>
-        </li>
+        
         {/* <li className="nav-item me-3 me-lg-1">
           <a className="nav-link" href="#">
             <span>
@@ -72,6 +66,13 @@ const Navbar = () => {
           {/* Center elements */}
           {/* Right elements */}
           <ul className="navbar-nav flex-row">
+          <li className="nav-item me-3 me-lg-1 active">
+          <NavLink className="nav-link" to="/main/home" title='Home Page'>
+            <span>
+              <i className="fas fa-home fa-lg" />
+            </span>
+          </NavLink>
+        </li>
             <li className="nav-item me-3 me-lg-1">
               <NavLink className="nav-link d-sm-flex align-items-sm-center" to="/user/userprofile">
                 <img

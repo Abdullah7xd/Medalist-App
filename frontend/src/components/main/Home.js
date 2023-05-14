@@ -47,15 +47,15 @@ const Home = () => {
           <SwiperSlide>
             <div className='slideContent w-100 border border-0'style={{ backgroundImage: "url('https://www.sportsnet.ca/wp-content/uploads/2019/08/CanBall1.jpg')", backgroundSize: "cover",backgroundRepeat:"no-repeat"}}>
               <p className='display-4 fw-bold mt-auto' style={{color:'red'}}>Basketball</p>
-              { <p className=''>"When we are saying this cannot be accomplished, this cannot be done, then we are short-changing ourselves. My brain, it cannot process failure. It will not process failure. Because if I have to sit there and face myself and tell myself, 'You are a failure,' I think that is almost worse than dying.-Kobe Bryant"</p>}
+              { <p className='' style={{color:'white'}}>"When we are saying this cannot be accomplished, this cannot be done, then we are short-changing ourselves. My brain, it cannot process failure. It will not process failure. Because if I have to sit there and face myself and tell myself, 'You are a failure,' I think that is almost worse than dying.-Kobe Bryant"</p>}
               {/* <button className='btn btn-primary btn-lg mt-4'>Action</button> */}
             </div>
 
           </SwiperSlide>
           <SwiperSlide>
-            <div className='slideContent w-100 border border-0' style={{backgroundImage:"url('https://wallpaperaccess.com/full/6802503.jpg')",backgroundSize:"cover",backgroundRepeat:"no-repeat" }}>
+            <div className='slideContent w-100 border border-0' style={{backgroundImage:"url('https://a.espncdn.com/photo/2023/0227/r1137254_1296x729_16-9.jpg')",backgroundSize:"cover",backgroundRepeat:"no-repeat",backgroundPosition:"center" }}>
               <p className='display-4 fw-bold mt-auto'>Badminton</p>
-              <p>Fitness is the key. You need to have strokes and stamina and agility; you need to exercise really well. On-court and off-court are equally important.-P.V.Sindhu</p>
+              <p style={{color:'white'}}>Fitness is the key. You need to have strokes and stamina and agility; you need to exercise really well. On-court and off-court are equally important.-P.V.Sindhu</p>
               {/* <button className='btn btn-primary btn-lg mt-4'>Action</button> */}
             </div>
             </SwiperSlide>
@@ -83,7 +83,7 @@ const Home = () => {
                 <title>Placeholder</title>
                 <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
               </svg>
-              <h2 className="fw-normal">Heading</h2>
+              <h2 className="fw-normal">CRICKET</h2>
               <p>
                 Some representative placeholder content for the three columns of
                 text below the carousel. This is the first column.

@@ -28,6 +28,7 @@ const Login = () => {
 				  title : 'Nice',
 				  text: 'Logged In Successfully'
 				})
+        
 
         navigate('/user/managetournament');
 
