@@ -21,7 +21,7 @@ const Profile = () => {
 							<div className='heightlen mt-2'>
 
 							<div className='d-flex justify-content-center mb-2'>
-								<h3 style={{fontSize:fontsize}}>Deepjyoti</h3>
+								<h3 style={{fontSize:fontsize}}>Abdullah Afzal</h3>
 							</div>
 							<div className='d-flex justify-content-center'>
 								<p>FULL STACK DEVELOPER</p>
