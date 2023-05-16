@@ -62,6 +62,7 @@ const Navbar = () => {
             </span>
           </a>
         </li> */}
+        </ul>
           {/* Center elements */}
           {/* Right elements */}
           <ul className="navbar-nav flex-row">
@@ -127,7 +128,6 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
-</ul>
             {/* <li className="nav-item dropdown me-3 me-lg-1">
               <a
                 className="nav-link dropdown-toggle hidden-arrow"
