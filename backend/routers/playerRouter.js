@@ -119,7 +119,6 @@ router.delete("/delete/:id", (req, res) => {
   Model.findByIdAndDelete(req.params.id)
     .then((result) => {
       console.log("User Data Deleted");
-      
       res.status(200).json({ status: "success", result });
     })
     .catch((err) => {
