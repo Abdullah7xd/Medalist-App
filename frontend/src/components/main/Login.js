@@ -29,6 +29,9 @@ const Login = () => {
 				  text: 'Logged In Successfully'
 				})
 
+        const data = await res.json();
+
+        sessionStorage.setItem('user', JSON.stringify(data));
         navigate('/user/managetournament');
 
 			}else if(res.status===401){
@@ -40,19 +43,6 @@ const Login = () => {
 			}
 		}
 	});
-
-
-
-
-
-
-
-
-
-
-
-
-  
   return (
     <>
     {/* Section: Design Block */}
@@ -149,44 +139,50 @@ const Login = () => {
                   </div>
                   {/* Checkbox */}
                   <div className="form-check d-flex justify-content-center mb-4">
-                    <input
+                    {/* <input
                       className="form-check-input me-2"
                       type="checkbox"
                       defaultValue=""
                       id="form2Example33"
                       defaultChecked=""
-                    />
-                    <label className="form-check-label" htmlFor="form2Example33">
+                    /> */}
+                    {/* <label className="form-check-label" htmlFor="form2Example33">
                       Subscribe to our newsletter
-                    </label>
+                    </label> */}
                   </div>
                   {/* Submit button */}
                   <button
                     type="submit"
                     className="btn btn-primary btn-block mb-4"
                   >
-                    Sign up
+                    Login
                   </button>
                   {/* Register buttons */}
                   <div className="text-center">
-                    <p>or sign up with:</p>
+                    <p>or Login with:</p>
                     <button
                       type="button"
                       className="btn btn-link btn-floating mx-1"
                     >
-                      <i className="fab fa-facebook-f" />
+                      <a href="https://www.facebook.com/login/">
+                        <i className="fab fa-facebook-f" />
+                        
+                        </a>
                     </button>
                     <button
                       type="button"
                       className="btn btn-link btn-floating mx-1"
                     >
-                      <i className="fab fa-google" />
+                     <a href="https://accounts.google.com/v3/signin/identifier?dsh=S-720659533%3A1683966838239476&authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue%26pli%3D1&ec=GAlAwAE&hl=en_GB&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession">
+                      <i className="fab fa-google" /></a> 
                     </button>
                     <button
                       type="button"
                       className="btn btn-link btn-floating mx-1"
                     >
+                      <a href="">
                       <i className="fab fa-twitter" />
+                      </a>
                     </button>
                     <button
                       type="button"
