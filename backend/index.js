@@ -14,8 +14,8 @@ app.use(cors({
 app.use(express.json());
 
 app.use('/user', userRouter);
-app.use('/user', playerRouter);
-app.use('/user', tournamentRouter);
+app.use('/player', playerRouter);
+app.use('/tournament', tournamentRouter);
 
 app.get('/',(req,res) => {res.send('working Perfectly')});
 app.listen(port,() =>{console.log('server is being started');});
