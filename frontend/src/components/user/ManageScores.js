@@ -97,7 +97,7 @@ const ScoreUpdateScreen = ({ matchData, game }) => {
   );
 };
 
-const ManageScores = ({ tournamentData }) => {
+const Managescores = ({ tournamentData }) => {
   const [matchList, setMatchList] = useState([]);
   const { apiUrl } = app_config;
   const [currentUser, setCurrentUser] = useState(
@@ -278,4 +278,4 @@ const ManageScores = ({ tournamentData }) => {
   );
 };
 
-export default ManageScores;
+export default Managescores;
