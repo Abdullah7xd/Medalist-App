@@ -206,7 +206,7 @@ const AddTournament = () => {
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title" id="exampleModalLabel">
-              Modal title
+              REGISTRATION
             </h5>
             <button
               type="button"
@@ -216,89 +216,115 @@ const AddTournament = () => {
             />
           </div>
           <div className="modal-body">
-          <div className="card rounded-3">
-                      <img
-                        src="https://images.pexels.com/photos/3755440/pexels-photo-3755440.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        className="w-100"
-                        style={{
-                          borderTopLeftRadius: ".3rem",
-                          borderTopRightRadius: ".3rem"
-                        }}
-                        alt="Sample photo"
-                      />
-                      <div className="card-body p-4 p-md-5">
-                        <h3 className="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">
-                          Registration Info
-                        </h3>
-                        <form className="px-md-2" onSubmit={tournamentForm.handleSubmit} >
-                          <div className=" mb-4">
-                            <input
-                              type="text"
-                              id="title"
-                              value={tournamentForm.values.title}
-                              onChange={tournamentForm.handleChange}
-                              className={"form-control" + (tournamentForm.errors.title ? "border-danger": '')}
-                              placeholder='Title'
-                            />
-                           
-                          </div>
-                          <div className="row">
-                            <div className="col-md-6 mb-4">
-                              <div className=" datepicker">
-                                <input
-                                  type="text"
-                                  id="game"
-                                  value={tournamentForm.values.game}
-                                  onChange={tournamentForm.handleChange}
-                                  className={"form-control " + (tournamentForm.errors.game ? "border-danger": '')}
-                                  
-                                />
-                                <label htmlFor="exampleDatepicker1" className="form-label">
-                                  Select a date
-                                </label>
-                              </div>
-                            </div>
-                            <div className="col-md-6 mb-4">
-                              <select className="select">
-                                <option value={1} disabled="">
-                                  Gender
-                                </option>
-                                <option value={2}>Female</option>
-                                <option value={3}>Male</option>
-                                <option value={4}>Other</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div className="mb-4">
-                            <select className="select">
-                              <option value={1} disabled="">
-                                Class
-                              </option>
-                              <option value={2}>Class 1</option>
-                              <option value={3}>Class 2</option>
-                              <option value={4}>Class 3</option>
-                            </select>
-                          </div>
-                          <div className="row mb-4 pb-2 pb-md-0 mb-md-5">
-                            <div className="col-md-6">
-                              <div className="">
-                                <input
-                                  type="text"
-                                  id="form3Example1w"
-                                  className="form-control"
-                                />
-                                <label className="form-label" htmlFor="form3Example1w">
-                                  Registration code
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                          <button type="submit" className="btn btn-success btn-lg mb-1">
-                            Submit
-                          </button>
-                        </form>
+            <div className="card rounded-3">
+              <img
+                src="https://images.pexels.com/photos/3755440/pexels-photo-3755440.jpeg?auto=compress&cs=tinysrgb&w=600"
+                className="w-100"
+                style={{
+                  borderTopLeftRadius: ".3rem",
+                  borderTopRightRadius: ".3rem"
+                }}
+                alt="Sample photo"
+              />
+              <div className="card-body p-4 p-md-5">
+                <h3 className="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">
+                  Registration Info
+                </h3>
+                <form className="px-md-2" onSubmit={tournamentForm.handleSubmit} >
+                  <div className=" mb-4">
+                    <input
+                      type="text"
+                      id="title"
+                      value={tournamentForm.values.title}
+                      onChange={tournamentForm.handleChange}
+                      className={"form-control" + (tournamentForm.errors.title ? "border-danger" : '')}
+                      placeholder='Title'
+                    />
+
+                    <div className="my-4">
+                      <label>Select Game</label>
+                      <select>
+                        <option value="cricket">Cricket</option>
+                        <option value="basketball">Basketball</option>
+                        <option value="chess">Chess</option>
+                        <option value="hockey">Hockey</option>
+                        <option value="tabletennis">TableTennis</option>
+                        <option value="volleyball">VolleyBall</option>
+
+                      </select>
+                    </div>
+
+
+                    <div className="row">
+                      <div className="col-md-6 mb-4">
+                        <div className=" datepicker">
+                          <label htmlFor="exampleDatepicker1" className="form-label">
+                            Select a date
+                          </label>
+                          <input
+                            type="date"
+                            id="game"
+                            value={tournamentForm.values.game}
+                            onChange={tournamentForm.handleChange}
+                            className={"form-control " + (tournamentForm.errors.game ? "border-danger" : '')}
+
+                          />
+                        </div>
+                      </div>
+                      <div className="col-md-6 mb-4">
+                        <select className="select">
+                          <option value={1} disabled="">
+                            Gender
+                          </option>
+                          <option value={2}>Female</option>
+                          <option value={3}>Male</option>
+                          <option value={4}>Other</option>
+                        </select>
                       </div>
                     </div>
+                    <div className="mb-4">
+                      <select className="select">
+                        <option value={1} disabled="">
+                          Class
+                        </option>
+                        <option value={2}>Class 1</option>
+                        <option value={3}>Class 2</option>
+                        <option value={4}>Class 3</option>
+                      </select>
+                    </div>
+                    <div className="row mb-4 pb-2 pb-md-0 mb-md-5">
+                      <div className="col-md-6">
+                        <div className="">
+                          <input
+                            type="text"
+                            id="form3Example1w"
+                            className="form-control"
+                          />
+                          <label className="form-label" htmlFor="form3Example1w">
+                            Registration code
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="">
+                      <label className="form-label" htmlFor="textAreaExample">
+                        Description
+                      </label>
+                      <textarea
+                        className="form-control"
+                        id="textAreaExample"
+                        rows={4}
+                        defaultValue={""}
+                      />
+                    </div>
+
+                    <button type="submit" className="btn btn-success btn-lg mb-1">
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
 
           </div>
           <div className="modal-footer">

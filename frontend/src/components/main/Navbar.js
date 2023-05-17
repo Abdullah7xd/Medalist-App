@@ -44,14 +44,14 @@ const Navbar = () => {
             </span>
           </a>
         </li> */}
-         {/* <li className="nav-item me-3 me-lg-1"> 
+            {/* <li className="nav-item me-3 me-lg-1"> 
           <a className="nav-link" href="#">
             <span>
               <i className="fas fa-video fa-lg" />
             </span>
           </a>
         </li>  */}
-        {/* <li className="nav-item me-3 me-lg-1">
+            {/* <li className="nav-item me-3 me-lg-1">
           <a className="nav-link" href="#">
             <span>
               <i className="fas fa-shopping-bag fa-lg" />
@@ -68,137 +68,142 @@ const Navbar = () => {
             </span>
           </a>
         </li> */}
-      </ul>
-      {/* Center elements */}
-      {/* Right elements */}
-      <ul className="navbar-nav flex-row">
-        <li className="nav-item me-3 me-lg-1">
-          <NavLink className="nav-link d-sm-flex align-items-sm-center" to="/user/userprofile">
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
-              className="rounded-circle"
-              height={22}
-              alt="Black and White Portrait of a Man"
-              loading="lazy"
-            />
-            <strong className="d-none d-sm-block ms-1">John</strong>
-          </NavLink>
-        </li>
-        <li className="nav-item me-3 me-lg-1">
-          <a className="nav-link" href="#">
-            <span>
-              <i className="fas fa-plus-circle fa-lg" />
-            </span>
-          </a>
-        </li>
-        <li className="nav-item dropdown me-3 me-lg-1">
-          <a
-            className="nav-link dropdown-toggle hidden-arrow"
-            href="#"
-            id="navbarDropdownMenuLink"
-            role="button"
-            data-mdb-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <i className="fas fa-comments fa-lg" />
-            <span className="badge rounded-pill badge-notification bg-danger">
-              6
-            </span>
-          </a>
-          <ul
-            className="dropdown-menu dropdown-menu-end"
-            aria-labelledby="navbarDropdownMenuLink"
-          >
-            <li>
-              <a className="dropdown-item" href="#">
-                Some news
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Another news
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Something else here
-              </a>
-            </li>
           </ul>
-        </li>
-        <li className="nav-item dropdown me-3 me-lg-1">
-          <a
-            className="nav-link dropdown-toggle hidden-arrow"
-            href="#"
-            id="navbarDropdownMenuLink"
-            role="button"
-            data-mdb-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <i className="fas fa-bell fa-lg" />
-            <span className="badge rounded-pill badge-notification bg-danger">
-              12
-            </span>
-          </a>
-          <ul
-            className="dropdown-menu dropdown-menu-end"
-            aria-labelledby="navbarDropdownMenuLink"
-          >
-            <li>
-              <a className="dropdown-item" href="#">
-                Some news
+          {/* Center elements */}
+          {/* Right elements */}
+          <ul className="navbar-nav flex-row">
+            <li className="nav-item me-3 me-lg-1">
+              <NavLink className="nav-link d-sm-flex align-items-sm-center" to="/user/userprofile">
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
+                  className="rounded-circle"
+                  height={22}
+                  alt="Black and White Portrait of a Man"
+                  loading="lazy"
+                />
+                <strong className="d-none d-sm-block ms-1">John</strong>
+              </NavLink>
+            </li>
+            <li className="nav-item me-3 me-lg-1">
+              <a className="nav-link" href="#">
+                <span>
+                  <i className="fas fa-plus-circle fa-lg" />
+                </span>
+
               </a>
             </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Another news
+            <li className="nav-item dropdown me-3 me-lg-1">
+              <a
+                className="nav-link dropdown-toggle hidden-arrow"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i className="fas fa-chevron-circle-down fa-lg" />
+                <span className="badge rounded-pill badge-notification bg-danger">
+                  6
+                </span>
               </a>
+              <ul
+                className="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <NavLink className="dropdown-item" to="/main/Login">
+                    Login
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/main/signup">
+                    Signup
+                  </NavLink>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    About Us
+                  </a>
+                </li>
+              </ul>
             </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Something else here
+
+            {/* <li className="nav-item dropdown me-3 me-lg-1">
+              <a
+                className="nav-link dropdown-toggle hidden-arrow"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i className="fas fa-bell fa-lg" />
+                <span className="badge rounded-pill badge-notification bg-danger">
+                  12
+                </span>
               </a>
+              <ul
+                className="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Some news
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Another news
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Something else here
+                  </a>
+                </li>
+              </ul>
+            </li> */}
+
+            <li className="nav-item dropdown me-3 me-lg-1">
+              <a
+                className="nav-link dropdown-toggle hidden-arrow"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i className="fas fa-comments fa-lg" />
+              </a>
+              <ul
+                className="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <a className="dropdown-item" href="#">
+                    
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Another news
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Something else here
+                  </a>
+                </li>
+              </ul>
             </li>
+            
           </ul>
-        </li>
-        <li className="nav-item dropdown me-3 me-lg-1">
-          <a
-            className="nav-link dropdown-toggle hidden-arrow"
-            href="#"
-            id="navbarDropdownMenuLink"
-            role="button"
-            data-mdb-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <i className="fas fa-chevron-circle-down fa-lg" />
-          </a>
-          <ul
-            className="dropdown-menu dropdown-menu-end"
-            aria-labelledby="navbarDropdownMenuLink"
-          >
-            <li>
-              <a className="dropdown-item" href="#">
-                Some news
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Another news
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Something else here
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      {/* Right elements */}
-    </div>
-  </nav>
-  {/* Navbar */}
-</>
-)}
+          {/* Right elements */}
+        </div>
+      </nav>
+      {/* Navbar */}
+    </>
+  )
+}
 
 export default Navbar;
