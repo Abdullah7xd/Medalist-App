@@ -215,7 +215,7 @@ const ManageTournament = () => {
 
   const { games } = app_config;
 
-  const [tournamentList, setTournamentList] = useState(null);
+  const [tournamentList, setTournamentList] = useState([]);
   const [loading, setLoading] = useState(false);
   const [isTeam, setIsTeam] = useState(false);
 
@@ -248,6 +248,9 @@ const ManageTournament = () => {
     if (selTournament !== null)
       return (
         <>
+                {/* card */}
+                <h1>{tournamentList[selTournament].title}</h1>
+
           <ul className="nav nav-tabs mb-3" id="ex-with-icons" role="tablist">
             <li className="nav-item" role="presentation">
               <a
@@ -372,6 +375,12 @@ const ManageTournament = () => {
       );
   };
 
+  const displayTournament = () => {
+    return tournamentList.map((tour, index) => (
+      <button className='btn btn-primary mb-3 w-100' onClick={e => selectTournament(tour, index)}>{tour.title}</button>
+    ))
+  }
+
   const selectTournament = (tournament, index) => {
     setSelTournament(index);
     console.log(games);
@@ -390,9 +399,14 @@ const ManageTournament = () => {
           <div className='col-md-2'>
             <div className='card'>
               <div className="card-body">
-                <button className='btn btn-primary' type="button"
+                <button className='btn btn-primary w-100' type="button"
                   data-mdb-toggle="modal"
                   data-mdb-target="#tournament-create">Create Tournament</button>
+                  <hr />
+                {
+                  displayTournament()
+                }
+
               </div>
             </div>
           </div>
