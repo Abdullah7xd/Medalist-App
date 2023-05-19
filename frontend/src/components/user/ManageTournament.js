@@ -186,7 +186,7 @@ const AddTournament = () => {
                       Submit
                     </button>
                   </div>
-                </form>
+                </form> 
               </div>
             </div>
 
@@ -399,7 +399,7 @@ const ManageTournament = () => {
           <div className='col-md-2'>
             <div className='card'>
               <div className="card-body">
-                <button className='btn btn-primary w-100' type="button"
+                 <button className='btn btn-primary w-100' type="button"
                   data-mdb-toggle="modal"
                   data-mdb-target="#tournament-create">Create Tournament</button>
                   <hr />
