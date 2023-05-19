@@ -46,9 +46,9 @@ const AddTournament = () => {
       if (res.status === 200) {
         Swal.fire({
           icon: 'success',
-          title : 'Nice',
+          title: 'Nice',
           text: 'Logged In Successfully'
-          
+
         })
       }
     }
@@ -101,7 +101,7 @@ const AddTournament = () => {
                       className={"mb-4 form-control" + (tournamentForm.errors.title ? " border-danger" : '')}
                       placeholder='Title'
                     />
-                     
+
 
                     <div className="my-4">
                       <label>Select Game</label>
@@ -248,8 +248,49 @@ const ManageTournament = () => {
     if (selTournament !== null)
       return (
         <>
-                {/* card */}
-                <h1>{tournamentList[selTournament].title}</h1>
+          {/* card */}
+          <h1>{tournamentList[selTournament].title}</h1>
+          <div className="card mb-3" style={{ maxWidth: 540 }}>
+            <div className="row g-0">
+              <div className="col-md-4">
+                <img
+                  src="https://mdbcdn.b-cdn.net/wp-content/uploads/2020/06/vertical.webp"
+                  alt="Trendy Pants and Shoes"
+                  className="img-fluid rounded-start"
+                />
+              </div>
+              <div className="col-md-8">
+                <div className="card-body">
+                  <h5 className="card-title">Tournament Details</h5>
+                  <div className='mt-3 ' />
+                  <input type='date' />
+                  ``
+
+                  <div className='mt-3'>
+
+                    <label className='form-label' htmlFor="textAreaExample">
+                      Description
+                    </label>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi voluptate deleniti minima non labore excepturi quasi dignissimos rerum blanditiis, ab sint, dicta dolores a id quidem amet sit molestiae cumque. Cum fugit odit amet corrupti, debitis nam numquam itaque rem pariatur nulla quas dignissimos consequatur tempore doloribus explicabo laudantium! Sint?</p>
+
+                  </div>
+                  <div className='mt-3' >
+                    <label className='title' htmlFor='textAreaExample'
+                      title='pla'
+                    />
+
+                  </div>
+
+
+                  {/* <p className="card-text">
+
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </p> */}
+                </div>
+              </div>
+            </div>
+          </div>
+
 
           <ul className="nav nav-tabs mb-3" id="ex-with-icons" role="tablist">
             <li className="nav-item" role="presentation">
@@ -402,7 +443,7 @@ const ManageTournament = () => {
                  <button className='btn btn-primary w-100' type="button"
                   data-mdb-toggle="modal"
                   data-mdb-target="#tournament-create">Create Tournament</button>
-                  <hr />
+                <hr />
                 {
                   displayTournament()
                 }
