@@ -120,7 +120,7 @@ const AddTournament = () => {
 
                     <div className="row">
                       <div className="col-md-6 mb-4">
-                        <div className=" datepicker">
+                        {/* <div className=" datepicker">
                           <label htmlFor="exampleDatepicker1" className="form-label">
                             Select a date
                           </label>
@@ -132,7 +132,7 @@ const AddTournament = () => {
                             className={"form-control " + (tournamentForm.errors.game ? "border-danger" : '')}
 
                           />
-                        </div>
+                        </div> */}
                       </div>
                       {/* <div className="col-md-6 mb-4">
                         <select className="select">
