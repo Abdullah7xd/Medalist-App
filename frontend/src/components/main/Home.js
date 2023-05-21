@@ -68,7 +68,7 @@ const Home = () => {
         {/* Wrap the rest of the page in another container to center all the content. */}
         <div className="container marketing">
           {/* Three columns of text below the carousel */}
-          <div className="row">
+          {/* <div className="row">
             <div className="col-lg-4">
               <svg
                 className="bd-placeholder-img rounded-circle"
@@ -94,7 +94,7 @@ const Home = () => {
                 </a>
               </p>
             </div>
-            {/* /.col-lg-4 */}
+            
             <div className="col-lg-4">
               <svg
                 className="bd-placeholder-img rounded-circle"
@@ -120,7 +120,7 @@ const Home = () => {
                 </a>
               </p>
             </div>
-            {/* /.col-lg-4 */}
+           
             <div className="col-lg-4">
               <svg
                 className="bd-placeholder-img rounded-circle"
@@ -146,12 +146,11 @@ const Home = () => {
                 </a>
               </p>
             </div>
-            {/* /.col-lg-4 */}
-          </div>
-          {/* /.row */}
-          {/* START THE FEATURETTES */}
-          <hr className="featurette-divider" />
-          <div className="row featurette">
+           
+          </div> */}
+          
+          {/* <hr className="featurette-divider" /> */}
+          <div className="row featurette mt-5">
             <div className="col-md-7">
               <h2 className="featurette-heading fw-normal lh-1">
                 First featurette heading.{" "}
