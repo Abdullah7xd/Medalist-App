@@ -80,9 +80,9 @@ const UserProfile = () => {
           style={{ color: "rgb(39 5 136)", fontFamily: "cursive" }}
         >
           <img
-            src="/game.jpg"
+            src="/userprofile1.png"
             height={100}
-            // alt="userprofile"
+            alt="userprofile"
             style={{ borderRadius: "100px" }}
           />
           <h3 className="fw-bold ms-2">My Profile</h3>
