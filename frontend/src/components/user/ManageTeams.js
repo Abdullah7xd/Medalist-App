@@ -19,13 +19,9 @@ const AddTeam = ({refreshPlayerList, tournamentData}) => {
     console.log(data);
     setPlayerList(data.result);
   };
-
   useEffect(() => {
     getPlayerList();
   }, []);
-
-
-
   const teamForm = useFormik({
     initialValues: {
         name: '',
