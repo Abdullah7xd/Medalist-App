@@ -152,9 +152,10 @@ const Home = () => {
           {/* <hr className="featurette-divider" /> */}
           <div className="row featurette mt-5">
             <div className="col-md-7">
-              <h2 className="featurette-heading fw-normal lh-1">
-                First featurette heading.{" "}
-                <span className="text-body-secondary">It’ll blow your mind.</span>
+              <h2 className="featurette-heading" style={{fontSize:'70px'}}>
+                {/* First featurette heading.{" "}
+                <span className="text-body-secondary">It’ll blow your mind.</span> */}
+                <b>Cricket</b>
               </h2>
               <p className="lead">
                 Some great placeholder content for the first featurette here.
