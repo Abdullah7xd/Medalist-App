@@ -15,7 +15,7 @@ const ManageMatches = ({ tournamentData }) => {
 
   const fetchMatches = async () => {
     setLoading(true);
-    const res = await fetch(apiUrl + "/match/getall");
+    const res = await fetch(apiUrl + "/match/getbytournament");
     const data = await res.json();
     setMatchList(data.result);
     console.log(data);

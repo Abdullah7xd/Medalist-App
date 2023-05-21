@@ -8,10 +8,13 @@ import app_config from '../../config';
 import ManageScores from './ManageScores';
 import ManageTeams from './ManageTeams';
 import Swal from 'sweetalert2';
+import { toast } from 'react-hot-toast';
 
 const AddTournament = () => {
 
   const url = app_config.apiUrl;
+
+  const [selImage, setSelImage] = useState(null);
 
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(sessionStorage.getItem("user"))
@@ -19,10 +22,26 @@ const AddTournament = () => {
 
   const { games } = app_config;
 
+  const uploadFile = (e) => {
+    const file = e.target.files[0];
+    const fd = new FormData();
+    fd.append("myfile", file);
+    fetch(url + "/util/uploadfile", {
+      method: "POST",
+      body: fd,
+    }).then((res) => {
+      if (res.status === 200) {
+        console.log("file uploaded");
+        toast.success('file uploaded');
+        setSelImage(file);
+      }
+    });
+  };
+
   const tournamentForm = useFormik({
     initialValues: {
       title: '',
-      game: '',
+      game: games[0].name,
       description: '',
       createdBy: currentUser._id,
       players: [],
@@ -31,6 +50,7 @@ const AddTournament = () => {
       updated_at: new Date()
     },
     onSubmit: async (values) => {
+      values.image = selImage.name;
       console.log(values);
       const res = await fetch(url + '/tournament/add', {
         method: 'POST',
@@ -106,16 +126,16 @@ const AddTournament = () => {
                     <div className="my-4">
                       <label>Select Game</label>
                       <select className='form-control'>
-                        <option value="cricket">Badminton</option>
-                        <option value="cricket">Cricket</option>
-                        <option value="basketball">Basketball</option>
-                        <option value="chess">Chess</option>
-                        <option value="hockey">Hockey</option>
-                        <option value="tabletennis">TableTennis</option>
-                        <option value="volleyball">VolleyBall</option>
+                        {
+                          games.map(game => (
+                            <option value={game.name}>{game.name}</option>
+                          ))
+                        }
 
                       </select>
                     </div>
+
+                    <input type="file" onChange={uploadFile} />
 
 
                     <div className="row">
@@ -186,7 +206,7 @@ const AddTournament = () => {
                       Submit
                     </button>
                   </div>
-                </form> 
+                </form>
               </div>
             </div>
 
@@ -249,29 +269,23 @@ const ManageTournament = () => {
       return (
         <>
           {/* card */}
-          <h1>{tournamentList[selTournament].title}</h1>
-          <div className="card mb-3" style={{ maxWidth: 540 }}>
+          
+          <div className="card mb-3">
             <div className="row g-0">
-              <div className="col-md-4">
-                <img
-                  src="https://mdbcdn.b-cdn.net/wp-content/uploads/2020/06/vertical.webp"
-                  alt="Trendy Pants and Shoes"
-                  className="img-fluid rounded-start"
-                />
+              <div className="col-md-6">
+                <div className='tour-img' style={{backgroundImage: `url(${url+'/'+tournamentList[selTournament].image})`}}></div> 
               </div>
-              <div className="col-md-8">
+              <div className="col-md-6">
                 <div className="card-body">
-                  <h5 className="card-title">Tournament Details</h5>
+                <h2>{tournamentList[selTournament].title}</h2>
                   <div className='mt-3 ' />
-                  <input type='date' />
-                  ``
 
                   <div className='mt-3'>
 
                     <label className='form-label' htmlFor="textAreaExample">
                       Description
                     </label>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi voluptate deleniti minima non labore excepturi quasi dignissimos rerum blanditiis, ab sint, dicta dolores a id quidem amet sit molestiae cumque. Cum fugit odit amet corrupti, debitis nam numquam itaque rem pariatur nulla quas dignissimos consequatur tempore doloribus explicabo laudantium! Sint?</p>
+                    <p>{tournamentList[selTournament].description}</p>
 
                   </div>
                   <div className='mt-3' >
@@ -440,7 +454,7 @@ const ManageTournament = () => {
           <div className='col-md-2'>
             <div className='card'>
               <div className="card-body">
-                 <button className='btn btn-primary w-100' type="button"
+                <button className='btn btn-primary w-100' type="button"
                   data-mdb-toggle="modal"
                   data-mdb-target="#tournament-create">Create Tournament</button>
                 <hr />
