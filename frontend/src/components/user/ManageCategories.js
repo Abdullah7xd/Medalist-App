@@ -5,7 +5,7 @@ const ManageCategories = ({ tournamentData, refreshData }) => {
   const { apiUrl, categoryData } = app_config;
   const [categories, setCategories] = useState(tournamentData.categories);
   const [inputText, setInputText] = useState("");
-  
+
 
   const addCatgeory = async () => {
     const res = await fetch(`${apiUrl}/tournament/update/${tournamentData._id}`, {
@@ -65,10 +65,10 @@ const ManageCategories = ({ tournamentData, refreshData }) => {
                 placeholder="Category Name"
               >
                 {categoryData[tournamentData.game].map((category, index) => (
-                        <option key={index} value={category}>
-                            {category}
-                        </option>
-                    )
+                  <option key={index} value={category}>
+                    {category}
+                  </option>
+                )
                 )}
 
               </select>

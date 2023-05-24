@@ -30,7 +30,7 @@ function App() {
             <Route path='login' element={<Login />} />
             <Route path='signup' element={<Signup />} />
           </Route>
-          <Route path="user" element={<User />}>
+          <Route path="user" element={<User/>}>
             <Route path='managecategories' element={<ManageCategories />} />
             <Route path='managetournament' element={<ManageTournament />} />
             <Route path='Managematches' element={<ManageMatches />} />

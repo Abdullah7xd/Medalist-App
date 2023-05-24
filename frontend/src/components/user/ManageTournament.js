@@ -20,6 +20,8 @@ const AddTournament = () => {
     JSON.parse(sessionStorage.getItem("user"))
   );
 
+  const [selGame, setSelGame] = useState('Cricket')
+
   const { games } = app_config;
 
   const uploadFile = (e) => {
@@ -51,6 +53,7 @@ const AddTournament = () => {
     },
     onSubmit: async (values) => {
       values.image = selImage.name;
+      values.game = selGame;
       console.log(values);
       const res = await fetch(url + '/tournament/add', {
         method: 'POST',
@@ -125,7 +128,7 @@ const AddTournament = () => {
 
                     <div className="my-4">
                       <label>Select Game</label>
-                      <select className='form-control'>
+                      <select className='form-control' onChange={e => setSelGame(e.target.value)}>
                         {
                           games.map(game => (
                             <option value={game.name}>{game.name}</option>
