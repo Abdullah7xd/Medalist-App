@@ -13,4 +13,4 @@ const myschema = new Schema(
         created_at: Date,
         updated_at: Date,
     });
-module.exports = model('tournament', myschema); 
+module.exports = model('tournament', myschema);
