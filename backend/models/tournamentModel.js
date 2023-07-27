@@ -9,8 +9,9 @@ const myschema = new Schema(
         createdBy: { type: Types.ObjectId, ref: "user" },
         players: [{ type: Types.ObjectId, ref: "player" }],
         tournamentMatches: Object,
+        categories: {type : Array, default : []},
         image: String,
         created_at: Date,
         updated_at: Date,
     });
-module.exports = model('tournament', myschema);
+module.exports = model('tournament', myschema); 

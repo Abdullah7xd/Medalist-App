@@ -15,13 +15,14 @@ import User from './components/user';
 import ManageScores from './components/user/ManageScores';
 import UserProfile from './components/user/UserProfile';
 import ManageTournament from './components/user/ManageTournament';
+import { Toaster } from 'react-hot-toast';
 
 
 function App() {
   return (
     <div>
       <BrowserRouter>
-
+        <Toaster position='top-center' />
         <Routes>
           <Route path='/' element={<Navigate to="/main/home" />} />
           <Route path="main" element={<Main />}>
@@ -29,7 +30,7 @@ function App() {
             <Route path='login' element={<Login />} />
             <Route path='signup' element={<Signup />} />
           </Route>
-          <Route path="user" element={<User />}>
+          <Route path="user" element={<User/>}>
             <Route path='managecategories' element={<ManageCategories />} />
             <Route path='managetournament' element={<ManageTournament />} />
             <Route path='Managematches' element={<ManageMatches />} />

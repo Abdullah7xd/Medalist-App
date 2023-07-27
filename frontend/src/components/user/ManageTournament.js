@@ -8,21 +8,42 @@ import app_config from '../../config';
 import ManageScores from './ManageScores';
 import ManageTeams from './ManageTeams';
 import Swal from 'sweetalert2';
+import { toast } from 'react-hot-toast';
 
 const AddTournament = () => {
 
   const url = app_config.apiUrl;
 
+  const [selImage, setSelImage] = useState(null);
+
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(sessionStorage.getItem("user"))
   );
 
+  const [selGame, setSelGame] = useState('Cricket')
+
   const { games } = app_config;
+
+  const uploadFile = (e) => {
+    const file = e.target.files[0];
+    const fd = new FormData();
+    fd.append("myfile", file);
+    fetch(url + "/util/uploadfile", {
+      method: "POST",
+      body: fd,
+    }).then((res) => {
+      if (res.status === 200) {
+        console.log("file uploaded");
+        toast.success('file uploaded');
+        setSelImage(file);
+      }
+    });
+  };
 
   const tournamentForm = useFormik({
     initialValues: {
       title: '',
-      game: '',
+      game: games[0].name,
       description: '',
       createdBy: currentUser._id,
       players: [],
@@ -31,6 +52,8 @@ const AddTournament = () => {
       updated_at: new Date()
     },
     onSubmit: async (values) => {
+      values.image = selImage.name;
+      values.game = selGame;
       console.log(values);
       const res = await fetch(url + '/tournament/add', {
         method: 'POST',
@@ -46,9 +69,9 @@ const AddTournament = () => {
       if (res.status === 200) {
         Swal.fire({
           icon: 'success',
-          title : 'Nice',
+          title: 'Nice',
           text: 'Logged In Successfully'
-          
+
         })
       }
     }
@@ -101,26 +124,26 @@ const AddTournament = () => {
                       className={"mb-4 form-control" + (tournamentForm.errors.title ? " border-danger" : '')}
                       placeholder='Title'
                     />
-                     
+
 
                     <div className="my-4">
                       <label>Select Game</label>
-                      <select className='form-control'>
-                        <option value="cricket">Badminton</option>
-                        <option value="cricket">Cricket</option>
-                        <option value="basketball">Basketball</option>
-                        <option value="chess">Chess</option>
-                        <option value="hockey">Hockey</option>
-                        <option value="tabletennis">TableTennis</option>
-                        <option value="volleyball">VolleyBall</option>
+                      <select className='form-control' onChange={e => setSelGame(e.target.value)}>
+                        {
+                          games.map(game => (
+                            <option value={game.name}>{game.name}</option>
+                          ))
+                        }
 
                       </select>
                     </div>
 
+                    <input type="file" onChange={uploadFile} />
+
 
                     <div className="row">
                       <div className="col-md-6 mb-4">
-                        <div className=" datepicker">
+                        {/* <div className=" datepicker">
                           <label htmlFor="exampleDatepicker1" className="form-label">
                             Select a date
                           </label>
@@ -132,7 +155,7 @@ const AddTournament = () => {
                             className={"form-control " + (tournamentForm.errors.game ? "border-danger" : '')}
 
                           />
-                        </div>
+                        </div> */}
                       </div>
                       {/* <div className="col-md-6 mb-4">
                         <select className="select">
@@ -215,7 +238,7 @@ const ManageTournament = () => {
 
   const { games } = app_config;
 
-  const [tournamentList, setTournamentList] = useState(null);
+  const [tournamentList, setTournamentList] = useState([]);
   const [loading, setLoading] = useState(false);
   const [isTeam, setIsTeam] = useState(false);
 
@@ -248,6 +271,44 @@ const ManageTournament = () => {
     if (selTournament !== null)
       return (
         <>
+          {/* card */}
+          
+          <div className="card mb-3">
+            <div className="row g-0">
+              <div className="col-md-6">
+                <div className='tour-img' style={{backgroundImage: `url(${url+'/'+tournamentList[selTournament].image})`}}></div> 
+              </div>
+              <div className="col-md-6">
+                <div className="card-body">
+                <h2>{tournamentList[selTournament].title}</h2>
+                  <div className='mt-3 ' />
+
+                  <div className='mt-3'>
+
+                    <label className='form-label' htmlFor="textAreaExample">
+                      Description
+                    </label>
+                    <p>{tournamentList[selTournament].description}</p>
+
+                  </div>
+                  <div className='mt-3' >
+                    <label className='title' htmlFor='textAreaExample'
+                      title='pla'
+                    />
+
+                  </div>
+
+
+                  {/* <p className="card-text">
+
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </p> */}
+                </div>
+              </div>
+            </div>
+          </div>
+
+
           <ul className="nav nav-tabs mb-3" id="ex-with-icons" role="tablist">
             <li className="nav-item" role="presentation">
               <a
@@ -372,6 +433,12 @@ const ManageTournament = () => {
       );
   };
 
+  const displayTournament = () => {
+    return tournamentList.map((tour, index) => (
+      <button className='btn btn-primary mb-3 w-100' onClick={e => selectTournament(tour, index)}>{tour.title}</button>
+    ))
+  }
+
   const selectTournament = (tournament, index) => {
     setSelTournament(index);
     console.log(games);
@@ -390,9 +457,14 @@ const ManageTournament = () => {
           <div className='col-md-2'>
             <div className='card'>
               <div className="card-body">
-                <button className='btn btn-primary' type="button"
+                <button className='btn btn-primary w-100' type="button"
                   data-mdb-toggle="modal"
                   data-mdb-target="#tournament-create">Create Tournament</button>
+                <hr />
+                {
+                  displayTournament()
+                }
+
               </div>
             </div>
           </div>

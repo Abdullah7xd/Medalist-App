@@ -24,21 +24,21 @@ const Home = () => {
         >
           <SwiperSlide>
             <div className='slideContent w-100 border border-0' style={{backgroundImage:"url('https://wallpaper.dog/large/20465764.jpg')",backgroundSize:"cover"}}>
-              <p className='display-4 fw-bold mt-auto'>Cricket</p>
+              <p className='display-4 fw-bold mt-auto'style={{color:'#8B0000'}}>Cricket</p>
               <p>“Enjoy the game & Chase your dreams. Dreams do come true.” – Sachin Tendulkar</p>
               {/* <button className='btn btn-primary btn-lg mt-4'>Action</button> */}
             </div>
             </SwiperSlide>
           <SwiperSlide>
             <div className='slideContent w-100 border border-0 ' style={{backgroundImage:"url('https://wallpapers.com/images/hd/intense-game-volleyball-4k-0c5y2vg6bn9zsh17.jpg')",backgroundSize:"cover"}}>
-              <p className='display-4 fw-bold mt-auto'>Volleyball</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi non animi voluptates odio iure, odit mollitia aut a autem, sequi amet natus doloremque id omnis maiores velit. Animi suscipit totam minus iusto cupiditate beatae laboriosam hic nemo? Libero, aut dolorum!</p>
+              <p className='display-4 fw-bold mt-auto' style={{color:'#DAA520'}}>Volleyball</p>
+              <p style={{color:'white'}}>"You're either getting better or getting worse. I don't think you stay the same in sports. If we want to achieve something special in the game, then those players have to recognize that they're responsible every day for getting better." -- Russ Rose</p>
               {/* <button className='btn btn-primary btn-lg mt-4'>Action</button> */}
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className='slideContent w-100 border border-0' style={{backgroundImage:"url('https://media.istockphoto.com/id/1294703794/photo/woman-playing-chess.jpg?s=612x612&w=0&k=20&c=RojxlhxCmbllty1AQTGd4nAX7Odv63vMBrnVYJJ6dlQ=')",backgroundSize:"cover"}}>
-              <p className='display-4 fw-bold mt-auto' style={{color:''}}>Chess</p>
+              <p className='display-4 fw-bold mt-auto' style={{color:'#9400D3'}}>Chess</p>
               <p>Chess began in India in the 6th century with the name of ‘Chaturanga’. It has come through lots of changes and editions in the rules and system of the game. Modern chess has come in front by the European.</p>
               {/* <button className='btn btn-primary btn-lg mt-4'>Action</button> */}
             </div>
@@ -53,7 +53,7 @@ const Home = () => {
 
           </SwiperSlide>
           <SwiperSlide>
-            <div className='slideContent w-100 border border-0' style={{backgroundImage:"url('https://a.espncdn.com/photo/2023/0227/r1137254_1296x729_16-9.jpg')",backgroundSize:"cover",backgroundRepeat:"no-repeat",backgroundPosition:"center" }}>
+            <div className='slideContent w-100 border border-0' style={{backgroundImage:"url('https://wallpaperaccess.com/full/6802503.jpg')",backgroundSize:"cover",backgroundRepeat:"no-repeat", backgroundPosition:"center" }}>
               <p className='display-4 fw-bold mt-auto'>Badminton</p>
               <p style={{color:'white'}}>Fitness is the key. You need to have strokes and stamina and agility; you need to exercise really well. On-court and off-court are equally important.-P.V.Sindhu</p>
               {/* <button className='btn btn-primary btn-lg mt-4'>Action</button> */}
@@ -68,7 +68,7 @@ const Home = () => {
         {/* Wrap the rest of the page in another container to center all the content. */}
         <div className="container marketing">
           {/* Three columns of text below the carousel */}
-          <div className="row">
+          {/* <div className="row">
             <div className="col-lg-4">
               <svg
                 className="bd-placeholder-img rounded-circle"
@@ -94,7 +94,7 @@ const Home = () => {
                 </a>
               </p>
             </div>
-            {/* /.col-lg-4 */}
+            
             <div className="col-lg-4">
               <svg
                 className="bd-placeholder-img rounded-circle"
@@ -120,7 +120,7 @@ const Home = () => {
                 </a>
               </p>
             </div>
-            {/* /.col-lg-4 */}
+           
             <div className="col-lg-4">
               <svg
                 className="bd-placeholder-img rounded-circle"
@@ -146,16 +146,16 @@ const Home = () => {
                 </a>
               </p>
             </div>
-            {/* /.col-lg-4 */}
-          </div>
-          {/* /.row */}
-          {/* START THE FEATURETTES */}
-          <hr className="featurette-divider" />
-          <div className="row featurette">
+           
+          </div> */}
+          
+          {/* <hr className="featurette-divider" /> */}
+          <div className="row featurette mt-5">
             <div className="col-md-7">
-              <h2 className="featurette-heading fw-normal lh-1">
-                First featurette heading.{" "}
-                <span className="text-body-secondary">It’ll blow your mind.</span>
+              <h2 className="featurette-heading" style={{fontSize:'70px'}}>
+                {/* First featurette heading.{" "}
+                <span className="text-body-secondary">It’ll blow your mind.</span> */}
+                <b>Cricket</b>
               </h2>
               <p className="lead">
                 Some great placeholder content for the first featurette here.
